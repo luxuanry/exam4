@@ -21,11 +21,11 @@ void fatal_error()
 int ft_cd(char **av, int ac)
 {
 	if(ac != 2)
-		return(ft_error("error: cd; bad arguments\n"));
+		return(ft_error("error: cd: bad arguments\n"));
 	else if(chdir(av[1]) == -1)
 		return(ft_error("error: cd: cannot change directory to "), 
-		ft_error(av[1])),
-		ft_error("\n");
+		ft_error(av[1]),
+		ft_error("\n"));
 	return (0);
 }
 
